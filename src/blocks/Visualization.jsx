@@ -1,4 +1,5 @@
-import Plot from "react-plotly.js";
+import PlotlyModule from "react-plotly.js";
+const Plot = PlotlyModule.default;
 
 const Visualization = ({ trajectory_data }) => {
   const max_val = Math.max(
