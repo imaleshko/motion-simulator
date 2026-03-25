@@ -11,8 +11,9 @@ const calculate = ({ x0, y0, v0, a, angle, t }) => {
 
   for (let t_current = 0; t_current <= t; t_current += 0.25) {
     let x = coordinate(x0, v0_x, a_x, t_current);
-    x_data.push(x);
     let y = coordinate(y0, v0_y, a_y, t_current);
+    if (v0 + a * t_current <= 0) break;
+    x_data.push(x);
     y_data.push(y);
     z_data.push(t_current);
   }
