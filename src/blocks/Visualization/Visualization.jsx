@@ -7,6 +7,11 @@ const Visualization = ({ trajectory_data }) => {
     ...trajectory_data.y_data,
   );
 
+  const min_val = Math.min(
+    ...trajectory_data.x_data,
+    ...trajectory_data.y_data,
+  );
+
   return (
     <Plot
       data={[
@@ -23,8 +28,8 @@ const Visualization = ({ trajectory_data }) => {
         height: 700,
         scene: {
           aspectmode: "cube",
-          xaxis: { range: [0, max_val] },
-          yaxis: { range: [0, max_val] },
+          xaxis: { range: [min_val, max_val] },
+          yaxis: { range: [min_val, max_val] },
         },
         title: { text: "Графік прямолінійного рівноприскореного руху" },
       }}
