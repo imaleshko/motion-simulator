@@ -22,7 +22,7 @@ const Page = () => {
     }));
   };
 
-  let trajectory_data = calculate(data);
+  const trajectory_data = calculate(data);
 
   return (
     <div className={styles.page}>

@@ -27,7 +27,7 @@ const Visualization = ({ trajectory_data }) => {
         width: 700,
         height: 700,
         scene: {
-          aspectmode: "cube",
+          aspectmode: "data",
           xaxis: { range: [min_val, max_val] },
           yaxis: { range: [min_val, max_val] },
         },
